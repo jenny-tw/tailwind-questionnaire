@@ -109,30 +109,31 @@ export default function App() {
     const scores = calculateScores(questions, answers)
     const answersJson = buildAnswersJson(questions, answers, notes)
 
-    const formData = new FormData()
-    formData.append('form-name', 'questionnaire-submission')
-    formData.append('submitter_name', respondent.name)
-    formData.append('submitter_company', respondent.company)
-    formData.append('submitter_email', respondent.email)
-    formData.append('submitted_at', new Date().toISOString())
-    formData.append('category_problem_market', scores['Problem & Market'] ?? '')
-    formData.append('category_competitive_position', scores['Competitive Position'] ?? '')
-    formData.append('category_commercial_traction', scores['Commercial Traction'] ?? '')
-    formData.append('category_team_governance', scores['Team & Governance'] ?? '')
-    formData.append('category_financial_story', scores['Financial Story'] ?? '')
-    formData.append('category_narrative', scores['Narrative'] ?? '')
-    formData.append('answers_json', JSON.stringify(answersJson))
+    const params = new URLSearchParams()
+    params.append('form-name', 'questionnaire-submission')
+    params.append('submitter_name', respondent.name)
+    params.append('submitter_company', respondent.company)
+    params.append('submitter_email', respondent.email)
+    params.append('submitted_at', new Date().toISOString())
+    params.append('category_problem_market', scores['Problem & Market'] ?? '')
+    params.append('category_competitive_position', scores['Competitive Position'] ?? '')
+    params.append('category_commercial_traction', scores['Commercial Traction'] ?? '')
+    params.append('category_team_governance', scores['Team & Governance'] ?? '')
+    params.append('category_financial_story', scores['Financial Story'] ?? '')
+    params.append('category_narrative', scores['Narrative'] ?? '')
+    params.append('answers_json', JSON.stringify(answersJson))
 
     try {
       const res = await fetch('/', {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: new URLSearchParams(formData).toString(),
+        body: params.toString(),
       })
       if (!res.ok) throw new Error(`Submission failed (${res.status})`)
       setStep(STEPS.SUBMITTED)
     } catch (err) {
-      setSubmitError('Something went wrong. Please try again.')
+      console.error('Form submission error:', err)
+      setSubmitError('Something went wrong submitting the form. Please try again.')
     } finally {
       setSubmitting(false)
     }
