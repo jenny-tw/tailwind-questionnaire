@@ -181,12 +181,12 @@ export default function App() {
         </header>
         <main className="app-main">
           <div className="welcome-card">
-            <h1 className="welcome-title">Company Assessment</h1>
+            <h1 className="welcome-title">Venture Snapshot</h1>
             <p className="welcome-description">
-              This short assessment helps the Tailwind Ventures team understand where your
-              company stands across six key dimensions. It takes approximately 5–10 minutes
-              to complete. Your answers are confidential and used solely to guide our
-              initial conversation.
+              This short questionnaire helps the Tailwind Ventures team build a picture of
+              where your company stands across six key dimensions. It takes approximately
+              5–10 minutes to complete. Your answers are confidential and used solely to
+              guide our initial conversation.
             </p>
 
             <form onSubmit={handleWelcomeSubmit} noValidate className="welcome-form">
@@ -248,7 +248,7 @@ export default function App() {
               </div>
 
               <button type="submit" className="btn btn-primary btn-large">
-                Begin Assessment →
+                Begin Venture Snapshot →
               </button>
             </form>
           </div>
@@ -320,7 +320,7 @@ export default function App() {
                 onClick={handleSubmit}
                 disabled={submitting}
               >
-                {submitting ? 'Submitting…' : 'Submit Assessment →'}
+                {submitting ? 'Submitting…' : 'Submit Snapshot →'}
               </button>
             </div>
           </div>
