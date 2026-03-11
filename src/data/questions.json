@@ -1,0 +1,237 @@
+{
+  "categories": [
+    "Problem & Market",
+    "Competitive Position",
+    "Commercial Traction",
+    "Team & Governance",
+    "Financial Story",
+    "Narrative"
+  ],
+  "questions": [
+    {
+      "id": 1,
+      "category": "Problem & Market",
+      "text": "How would you describe the primary evidence that your target customers have an urgent need for your solution?",
+      "type": "single",
+      "required": true,
+      "options": [
+        { "text": "We have signed LOIs, paid pilots, or strong revenue traction", "score": 10 },
+        { "text": "We have qualitative validation (interviews, surveys, waitlist)", "score": 7 },
+        { "text": "We have strong logical/industry evidence but limited direct customer data", "score": 4 },
+        { "text": "We're still building out our customer validation", "score": 1 }
+      ]
+    },
+    {
+      "id": 2,
+      "category": "Problem & Market",
+      "text": "How do you currently size your market opportunity?",
+      "type": "single",
+      "required": true,
+      "options": [
+        { "text": "Bottom-up: built from customer segment data and verified assumptions", "score": 10 },
+        { "text": "Top-down: based on industry reports and a percentage capture", "score": 10 },
+        { "text": "Both approaches, cross-referenced", "score": 5 },
+        { "text": "We haven't formalized this yet", "score": 1 }
+      ]
+    },
+    {
+      "id": 3,
+      "category": "Problem & Market",
+      "text": "How clearly can you articulate why this is the right moment for your company — the specific market shift, technology change, or regulatory event that makes now the window?",
+      "type": "rating",
+      "required": true,
+      "ratingLabels": {
+        "1": "Not yet formalized",
+        "2": "Have early indications",
+        "3": "We have a general answer",
+        "4": "We have compelling research but need to lock it in",
+        "5": "Crisp, specific, investor-ready"
+      },
+      "options": [
+        { "text": "1", "score": 2 },
+        { "text": "2", "score": 4 },
+        { "text": "3", "score": 6 },
+        { "text": "4", "score": 8 },
+        { "text": "5", "score": 10 }
+      ]
+    },
+    {
+      "id": 4,
+      "category": "Competitive Position",
+      "text": "Which of the following best describes your competitive moat?",
+      "type": "multi",
+      "required": true,
+      "instruction": "Select all that apply",
+      "scoreCap": 10,
+      "options": [
+        { "text": "Proprietary technology or IP", "score": 9 },
+        { "text": "Network effects or data advantages", "score": 9 },
+        { "text": "Switching costs / high retention", "score": 8 },
+        { "text": "Brand, distribution, or go-to-market advantage", "score": 7 },
+        { "text": "First-mover / execution speed", "score": 5 },
+        { "text": "We're still defining this", "score": 2 }
+      ]
+    },
+    {
+      "id": 5,
+      "category": "Competitive Position",
+      "text": "How would you rate the clarity of your competitive positioning — your ability to explain why you win vs. each major alternative?",
+      "type": "rating",
+      "required": true,
+      "ratingLabels": {
+        "1": "Still developing",
+        "2": "??",
+        "3": "Solid internally, not yet investor-tested",
+        "4": "??",
+        "5": "Battle-tested, clear, documented"
+      },
+      "options": [
+        { "text": "1", "score": 2 },
+        { "text": "2", "score": 4 },
+        { "text": "3", "score": 6 },
+        { "text": "4", "score": 8 },
+        { "text": "5", "score": 10 }
+      ]
+    },
+    {
+      "id": 6,
+      "category": "Commercial Traction",
+      "text": "What is your current revenue stage?",
+      "type": "single",
+      "required": true,
+      "options": [
+        { "text": "Pre-revenue", "score": 2 },
+        { "text": "Pilots / POCs (unpaid or discounted)", "score": 4 },
+        { "text": "Early revenue (1–5 paying customers)", "score": 6 },
+        { "text": "Growing revenue (provide ARR figure in the notes field)", "score": 8 },
+        { "text": "Scaling revenue", "score": 10 }
+      ],
+      "hasNote": true,
+      "notePlaceholder": "If growing revenue, please provide your ARR figure here"
+    },
+    {
+      "id": 7,
+      "category": "Commercial Traction",
+      "text": "Do you know your customer acquisition cost (CAC) and lifetime value (LTV)?",
+      "type": "single",
+      "required": true,
+      "options": [
+        { "text": "Yes — both are calculated and based on real data", "score": 10 },
+        { "text": "Partially — we have estimates but they're not fully validated", "score": 6 },
+        { "text": "We've thought about it but haven't formalized the numbers", "score": 3 },
+        { "text": "Not yet", "score": 1 }
+      ]
+    },
+    {
+      "id": 8,
+      "category": "Commercial Traction",
+      "text": "How long did it take to close your last three deals (from first contact to signed contract)?",
+      "type": "single",
+      "required": true,
+      "helperText": "If you're pre-revenue, please select the option that best applies to your pilot or early customer conversations.",
+      "options": [
+        { "text": "Under 2 weeks", "score": 10 },
+        { "text": "2–8 weeks", "score": 7 },
+        { "text": "2–6 months", "score": 4 },
+        { "text": "Over 6 months / still in progress", "score": 2 }
+      ]
+    },
+    {
+      "id": 9,
+      "category": "Team & Governance",
+      "text": "How would you describe your current team's coverage of the key functions you'll need to scale over the next 18 months?",
+      "type": "single",
+      "required": true,
+      "options": [
+        { "text": "Strong across all critical functions", "score": 10 },
+        { "text": "Covered for now, with 1–2 known gaps we're actively addressing", "score": 7 },
+        { "text": "We have meaningful gaps we haven't yet resolved", "score": 4 },
+        { "text": "Our team is lean and several areas are under-resourced", "score": 2 }
+      ]
+    },
+    {
+      "id": 10,
+      "category": "Team & Governance",
+      "text": "Do you currently have a board of directors or advisory board that provides meaningful challenge and strategic input — not just support?",
+      "type": "single",
+      "required": true,
+      "options": [
+        { "text": "Yes — active board with relevant experience and genuine oversight", "score": 10 },
+        { "text": "We have advisors but not a formal board yet", "score": 6 },
+        { "text": "We have a board but it's largely passive at this stage", "score": 4 },
+        { "text": "Not yet", "score": 1 }
+      ]
+    },
+    {
+      "id": 11,
+      "category": "Team & Governance",
+      "text": "Are all founders and key executives under a formal vesting schedule?",
+      "type": "single",
+      "required": true,
+      "options": [
+        { "text": "Yes, all founders and key team members are on vesting", "score": 10 },
+        { "text": "Some, but not all", "score": 5 },
+        { "text": "Not currently", "score": 1 }
+      ]
+    },
+    {
+      "id": 12,
+      "category": "Financial Story",
+      "text": "How would you rate the quality of your current financial model?",
+      "type": "single",
+      "required": true,
+      "options": [
+        { "text": "Basic / working from a template", "score": 2 },
+        { "text": "Built out, but not yet stress-tested or investor-reviewed", "score": 5 },
+        { "text": "Detailed with clear assumptions, scenarios, and unit economics", "score": 8 },
+        { "text": "Investor-grade: independently reviewed or advisor-validated", "score": 10 }
+      ]
+    },
+    {
+      "id": 13,
+      "category": "Financial Story",
+      "text": "For the capital you're looking to raise, do you have a clear deployment plan with specific milestones it will fund, and what those milestones unlock?",
+      "type": "single",
+      "required": true,
+      "options": [
+        { "text": "Yes — specific milestones with clear logic for the next raise", "score": 10 },
+        { "text": "Mostly — we have a general plan but not fully mapped", "score": 6 },
+        { "text": "We know the amount we need but haven't mapped it to milestones in detail", "score": 3 },
+        { "text": "Not yet", "score": 1 }
+      ]
+    },
+    {
+      "id": 14,
+      "category": "Financial Story",
+      "text": "Have you modeled what happens if growth is 30–40% slower than your base case?",
+      "type": "single",
+      "required": true,
+      "options": [
+        { "text": "Yes — we have downside scenarios with adjusted timelines and capital needs", "score": 10 },
+        { "text": "Partially — we've thought about it but haven't modeled it formally", "score": 5 },
+        { "text": "Not yet", "score": 1 }
+      ]
+    },
+    {
+      "id": 15,
+      "category": "Narrative",
+      "text": "If you had to describe your company in two minutes with no slides — to a smart investor who knows nothing about your space — how confident are you in that pitch right now?",
+      "type": "rating",
+      "required": true,
+      "ratingLabels": {
+        "1": "I'd be uncomfortable",
+        "2": "??",
+        "3": "Solid but slide-dependent",
+        "4": "??",
+        "5": "Confident and practiced"
+      },
+      "options": [
+        { "text": "1", "score": 2 },
+        { "text": "2", "score": 4 },
+        { "text": "3", "score": 6 },
+        { "text": "4", "score": 8 },
+        { "text": "5", "score": 10 }
+      ]
+    }
+  ]
+}
