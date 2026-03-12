@@ -706,13 +706,245 @@ body {
 }
 
 /* ===================================================
+   STAGE SELECTOR
+   =================================================== */
+
+.stage-selector {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+@media (max-width: 480px) {
+  .stage-selector {
+    grid-template-columns: 1fr;
+  }
+}
+
+.stage-selector--error .stage-option {
+  border-color: #e53e3e;
+}
+
+.stage-option {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+  padding: 14px 16px;
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: border-color var(--transition), background var(--transition), box-shadow var(--transition);
+}
+
+.stage-option:hover {
+  border-color: var(--color-primary);
+  background: rgba(37, 92, 255, 0.03);
+}
+
+.stage-option.selected {
+  border-color: var(--color-primary);
+  background: rgba(37, 92, 255, 0.05);
+  box-shadow: 0 0 0 2px rgba(37, 92, 255, 0.15);
+}
+
+.stage-option:focus-within {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 1px;
+}
+
+.stage-option-label {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--color-secondary);
+}
+
+.stage-option.selected .stage-option-label {
+  color: var(--color-primary);
+}
+
+.stage-option-sub {
+  font-size: 0.78rem;
+  color: var(--color-text-muted);
+}
+
+/* ===================================================
    RADAR CHART
    =================================================== */
 
 .radar-wrapper {
   width: 100%;
-  max-width: 480px;
+  max-width: 500px;
   margin: 0 auto;
+}
+
+/* ===================================================
+   RESULTS PAGE
+   =================================================== */
+
+.app-main--wide {
+  max-width: 760px;
+}
+
+.results-outer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.results-success-banner {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: var(--color-white);
+  border: 1.5px solid rgba(37, 92, 255, 0.2);
+  border-radius: var(--radius);
+  padding: 20px 24px;
+  box-shadow: var(--shadow);
+}
+
+.results-success-icon {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--color-primary), var(--color-bright-blue));
+  color: white;
+  font-size: 1.4rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.results-success-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--color-secondary);
+}
+
+.results-success-sub {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  margin-top: 2px;
+}
+
+.results-printable {
+  background: var(--color-white);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 40px 44px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+@media (max-width: 600px) {
+  .results-printable {
+    padding: 28px 20px;
+  }
+}
+
+.results-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 8px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.results-logo {
+  max-height: 40px;
+  margin-bottom: 8px;
+}
+
+.results-title {
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: var(--color-secondary);
+}
+
+.results-subheading {
+  font-size: 1rem;
+  color: var(--color-text);
+  font-weight: 500;
+}
+
+.results-date {
+  font-size: 0.88rem;
+  color: var(--color-text-muted);
+}
+
+.results-section {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Scores Table */
+
+.scores-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.92rem;
+}
+
+.scores-table th {
+  text-align: left;
+  padding: 10px 14px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-secondary);
+  background: var(--color-light-cyan);
+  border-bottom: 2px solid var(--color-soft-cyan);
+}
+
+.scores-table td {
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--color-border);
+  color: var(--color-text);
+}
+
+.scores-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.scores-table tbody tr:hover td {
+  background: rgba(37, 92, 255, 0.02);
+}
+
+.scores-table-score {
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+/* Results Actions */
+
+.results-actions {
+  display: flex;
+  justify-content: center;
+}
+
+.results-closing {
+  text-align: center;
+  font-size: 0.88rem;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+  padding-bottom: 16px;
+}
+
+.results-closing a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+.results-closing a:hover {
+  text-decoration: underline;
 }
 
 /* ===================================================

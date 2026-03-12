@@ -1,4 +1,39 @@
 {
+  "stages": ["Pre-Seed", "Seed", "Series A", "Series B+"],
+  "benchmarks": {
+    "Pre-Seed": {
+      "Problem & Market": 5,
+      "Competitive Position": 2,
+      "Commercial Traction": 2,
+      "Team & Governance": 5,
+      "Financial Story": 2,
+      "Narrative": 2
+    },
+    "Seed": {
+      "Problem & Market": 7,
+      "Competitive Position": 3,
+      "Commercial Traction": 5,
+      "Team & Governance": 6,
+      "Financial Story": 5,
+      "Narrative": 5
+    },
+    "Series A": {
+      "Problem & Market": 8,
+      "Competitive Position": 5,
+      "Commercial Traction": 8,
+      "Team & Governance": 8,
+      "Financial Story": 8,
+      "Narrative": 7
+    },
+    "Series B+": {
+      "Problem & Market": 10,
+      "Competitive Position": 7,
+      "Commercial Traction": 10,
+      "Team & Governance": 10,
+      "Financial Story": 10,
+      "Narrative": 10
+    }
+  },
   "categories": [
     "Problem & Market",
     "Competitive Position",
@@ -15,9 +50,9 @@
       "type": "single",
       "required": true,
       "options": [
-        { "text": "We have signed LOIs, paid pilots, or strong revenue traction", "score": 10 },
-        { "text": "We have qualitative validation (interviews, surveys, waitlist)", "score": 7 },
-        { "text": "We have strong logical/industry evidence but limited direct customer data", "score": 4 },
+        { "text": "We have signed LOIs, paid pilots, or strong revenue traction", "score": 9 },
+        { "text": "We have qualitative validation (interviews, surveys, waitlist)", "score": 6 },
+        { "text": "We have strong logical/industry evidence but limited direct customer data", "score": 3 },
         { "text": "We're still building out our customer validation", "score": 1 }
       ]
     },
@@ -28,9 +63,9 @@
       "type": "single",
       "required": true,
       "options": [
-        { "text": "Bottom-up: built from customer segment data and verified assumptions", "score": 10 },
-        { "text": "Top-down: based on industry reports and a percentage capture", "score": 10 },
-        { "text": "Both approaches, cross-referenced", "score": 5 },
+        { "text": "Bottom-up: built from customer segment data and verified assumptions", "score": 9 },
+        { "text": "Top-down: based on industry reports and a percentage capture", "score": 4 },
+        { "text": "Both approaches, cross-referenced", "score": 6 },
         { "text": "We haven't formalized this yet", "score": 1 }
       ]
     },
@@ -48,11 +83,11 @@
         "5": "Crisp, specific, investor-ready"
       },
       "options": [
-        { "text": "1", "score": 2 },
-        { "text": "2", "score": 4 },
-        { "text": "3", "score": 6 },
-        { "text": "4", "score": 8 },
-        { "text": "5", "score": 10 }
+        { "text": "1", "score": 1 },
+        { "text": "2", "score": 3 },
+        { "text": "3", "score": 5 },
+        { "text": "4", "score": 7 },
+        { "text": "5", "score": 9 }
       ]
     },
     {
@@ -64,12 +99,12 @@
       "instruction": "Select all that apply",
       "scoreCap": 10,
       "options": [
-        { "text": "Proprietary technology or IP", "score": 9 },
-        { "text": "Network effects or data advantages", "score": 9 },
-        { "text": "Switching costs / high retention", "score": 8 },
-        { "text": "Brand, distribution, or go-to-market advantage", "score": 7 },
-        { "text": "First-mover / execution speed", "score": 5 },
-        { "text": "We're still defining this", "score": 2 }
+        { "text": "Proprietary technology or IP", "score": 3 },
+        { "text": "Network effects or data advantages", "score": 2 },
+        { "text": "Switching costs / high retention", "score": 2 },
+        { "text": "Brand, distribution, or go-to-market advantage", "score": 2 },
+        { "text": "First-mover / execution speed", "score": 1 },
+        { "text": "We're still defining this", "score": 0 }
       ]
     },
     {
@@ -86,11 +121,11 @@
         "5": "Battle-tested, clear, documented"
       },
       "options": [
-        { "text": "1", "score": 2 },
-        { "text": "2", "score": 4 },
-        { "text": "3", "score": 6 },
-        { "text": "4", "score": 8 },
-        { "text": "5", "score": 10 }
+        { "text": "1", "score": 1 },
+        { "text": "2", "score": 2 },
+        { "text": "3", "score": 4 },
+        { "text": "4", "score": 6 },
+        { "text": "5", "score": 8 }
       ]
     },
     {
@@ -101,7 +136,7 @@
       "required": true,
       "options": [
         { "text": "Pre-revenue", "score": 2 },
-        { "text": "Pilots / POCs (unpaid or discounted)", "score": 4 },
+        { "text": "Pilots / POCs (unpaid or discounted)", "score": 5 },
         { "text": "Early revenue (1–5 paying customers)", "score": 6 },
         { "text": "Growing revenue (provide ARR figure in the notes field)", "score": 8 },
         { "text": "Scaling revenue", "score": 10 }
@@ -143,7 +178,7 @@
       "type": "single",
       "required": true,
       "options": [
-        { "text": "Strong across all critical functions", "score": 10 },
+        { "text": "Strong across all critical functions", "score": 9 },
         { "text": "Covered for now, with 1–2 known gaps we're actively addressing", "score": 7 },
         { "text": "We have meaningful gaps we haven't yet resolved", "score": 4 },
         { "text": "Our team is lean and several areas are under-resourced", "score": 2 }
@@ -158,7 +193,7 @@
       "options": [
         { "text": "Yes — active board with relevant experience and genuine oversight", "score": 10 },
         { "text": "We have advisors but not a formal board yet", "score": 6 },
-        { "text": "We have a board but it's largely passive at this stage", "score": 4 },
+        { "text": "We have a board but it's largely passive at this stage", "score": 5 },
         { "text": "Not yet", "score": 1 }
       ]
     },
@@ -169,7 +204,7 @@
       "type": "single",
       "required": true,
       "options": [
-        { "text": "Yes, all founders and key team members are on vesting", "score": 10 },
+        { "text": "Yes, all founders and key team members are on vesting", "score": 9 },
         { "text": "Some, but not all", "score": 5 },
         { "text": "Not currently", "score": 1 }
       ]
@@ -181,9 +216,9 @@
       "type": "single",
       "required": true,
       "options": [
-        { "text": "Basic / working from a template", "score": 2 },
-        { "text": "Built out, but not yet stress-tested or investor-reviewed", "score": 5 },
-        { "text": "Detailed with clear assumptions, scenarios, and unit economics", "score": 8 },
+        { "text": "Basic / working from a template", "score": 1 },
+        { "text": "Built out, but not yet stress-tested or investor-reviewed", "score": 4 },
+        { "text": "Detailed with clear assumptions, scenarios, and unit economics", "score": 7 },
         { "text": "Investor-grade: independently reviewed or advisor-validated", "score": 10 }
       ]
     },
@@ -194,7 +229,7 @@
       "type": "single",
       "required": true,
       "options": [
-        { "text": "Yes — specific milestones with clear logic for the next raise", "score": 10 },
+        { "text": "Yes — specific milestones with clear logic for the next raise", "score": 9 },
         { "text": "Mostly — we have a general plan but not fully mapped", "score": 6 },
         { "text": "We know the amount we need but haven't mapped it to milestones in detail", "score": 3 },
         { "text": "Not yet", "score": 1 }
@@ -207,7 +242,7 @@
       "type": "single",
       "required": true,
       "options": [
-        { "text": "Yes — we have downside scenarios with adjusted timelines and capital needs", "score": 10 },
+        { "text": "Yes — we have downside scenarios with adjusted timelines and capital needs", "score": 9 },
         { "text": "Partially — we've thought about it but haven't modeled it formally", "score": 5 },
         { "text": "Not yet", "score": 1 }
       ]
@@ -224,6 +259,27 @@
         "3": "Solid but slide-dependent",
         "4": "Getting polished",
         "5": "Confident and practiced"
+      },
+      "options": [
+        { "text": "1", "score": 0 },
+        { "text": "2", "score": 2 },
+        { "text": "3", "score": 5 },
+        { "text": "4", "score": 6 },
+        { "text": "5", "score": 9 }
+      ]
+    },
+    {
+      "id": 16,
+      "category": "Narrative",
+      "text": "How successfully does your story draw on robust evidence to craft a cohesive narrative across your pitch, your deck, and your data room?",
+      "type": "rating",
+      "required": true,
+      "ratingLabels": {
+        "1": "We rely primarily on our story and team pedigree; we're building a good story but don't yet have the evidence to back it up",
+        "2": "We rely heavily on our story and can point to some evidence, but need to strengthen it significantly",
+        "3": "We have a compelling story linked to evidence, but it's not fully defensible and we know it needs work",
+        "4": "We've put a lot of work into building the evidence and honing our story, and we have tested it with investors",
+        "5": "Our story is backed by strong, defensible evidence; it is coherent and consistent across our pitch, our deck, and every document in our data room"
       },
       "options": [
         { "text": "1", "score": 2 },

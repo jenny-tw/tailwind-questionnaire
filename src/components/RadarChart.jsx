@@ -6,6 +6,7 @@ import {
   PolarRadiusAxis,
   ResponsiveContainer,
   Tooltip,
+  Legend,
 } from 'recharts'
 
 const CATEGORY_SHORT = {
@@ -17,16 +18,17 @@ const CATEGORY_SHORT = {
   'Narrative': 'Narrative',
 }
 
-export default function RadarChartComponent({ scores }) {
-  const data = Object.entries(scores).map(([category, value]) => ({
+export default function RadarChartComponent({ scores, benchmarks, stage }) {
+  const data = Object.keys(scores).map(category => ({
     subject: CATEGORY_SHORT[category] || category,
     fullName: category,
-    score: value,
+    score: scores[category] ?? 0,
+    benchmark: benchmarks ? (benchmarks[category] ?? 0) : undefined,
   }))
 
   return (
     <div className="radar-wrapper" aria-label="Category scores radar chart">
-      <ResponsiveContainer width="100%" height={360}>
+      <ResponsiveContainer width="100%" height={400}>
         <ReRadarChart cx="50%" cy="50%" outerRadius="70%" data={data}>
           <PolarGrid stroke="#e2e8f0" />
           <PolarAngleAxis
@@ -42,18 +44,26 @@ export default function RadarChartComponent({ scores }) {
             axisLine={false}
           />
           <Radar
-            name="Score"
+            name="Your Score"
             dataKey="score"
             stroke="#255cff"
             fill="#255cff"
             fillOpacity={0.4}
             strokeWidth={2}
           />
+          {benchmarks && (
+            <Radar
+              name={stage ? `${stage} Benchmark` : 'Benchmark'}
+              dataKey="benchmark"
+              stroke="#e4a840"
+              fill="#e4a840"
+              fillOpacity={0.3}
+              strokeWidth={2}
+            />
+          )}
+          <Legend />
           <Tooltip
-            formatter={(value, name, props) => [
-              `${value} / 10`,
-              props.payload?.fullName || name,
-            ]}
+            formatter={(value, name) => [`${value} / 10`, name]}
           />
         </ReRadarChart>
       </ResponsiveContainer>

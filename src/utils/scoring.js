@@ -46,6 +46,16 @@ export function calculateScores(questions, answers) {
 }
 
 /**
+ * Get benchmark targets for a given stage.
+ * @param {string} stage - e.g. "Series A"
+ * @param {Object} questionsData - Full questions.json data
+ * @returns {Object} - Category name -> benchmark score
+ */
+export function getBenchmarks(stage, questionsData) {
+  return questionsData.benchmarks?.[stage] ?? {}
+}
+
+/**
  * Build the answers_json payload for Netlify Forms submission.
  */
 export function buildAnswersJson(questions, answers, notes) {
