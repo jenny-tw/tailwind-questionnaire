@@ -50,13 +50,6 @@ export default function QuestionCard({ question, answer, note, onAnswer, onNote,
           })}
         </div>
 
-        {/* Show selected label beneath scale */}
-        {answer && question.ratingLabels?.[answer] && question.ratingLabels[answer] !== '??' && (
-          <p className="rating-selected-label">
-            {answer} — {question.ratingLabels[answer]}
-          </p>
-        )}
-
         {showError && !hasAnswer && (
           <p className="field-error" role="alert">Please select a rating to continue.</p>
         )}
