@@ -198,10 +198,6 @@ export default function App() {
     const a = answers[question.id]
     if (!a) return <em className="review-empty">Not answered</em>
     if (Array.isArray(a)) return a.join(', ')
-    if (question.type === 'rating') {
-      const label = question.ratingLabels?.[a]
-      return label && label !== '??' ? `${a} — ${label}` : a
-    }
     return a
   }
 

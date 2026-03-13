@@ -18,7 +18,12 @@ export function calculateScores(questions, answers) {
     let score = 0
 
     if (question.type === 'single' || question.type === 'rating') {
-      const option = question.options.find(o => o.text === answer)
+      let option = question.options.find(o => o.text === answer)
+      // Rating answers are now stored as label text — resolve back to the option via ratingLabels
+      if (!option && question.type === 'rating' && question.ratingLabels) {
+        const numKey = Object.keys(question.ratingLabels).find(k => question.ratingLabels[k] === answer)
+        if (numKey) option = question.options.find(o => o.text === numKey)
+      }
       if (option) score = option.score
     } else if (question.type === 'multi') {
       const selected = Array.isArray(answer) ? answer : [answer]

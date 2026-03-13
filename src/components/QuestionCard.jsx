@@ -26,32 +26,33 @@ export default function QuestionCard({ question, answer, note, onAnswer, onNote,
         <div className="question-category">{question.category}</div>
         <h2 className="question-text">{question.text}</h2>
 
-        <div className="rating-scale">
+        <div className="options-list">
           {question.options.map((opt) => {
-            const val = opt.text
-            const label = question.ratingLabels?.[val]
-            const isSelected = answer === val
-            const isPlaceholder = label === '??'
+            const label = question.ratingLabels?.[opt.text]
+            if (!label || label === '??') return null
+            const isSelected = answer === label
             return (
-              <button
-                key={val}
-                type="button"
-                className={`rating-btn${isSelected ? ' selected' : ''}`}
-                onClick={() => handleSingle(val)}
-                aria-pressed={isSelected}
-                aria-label={`Rating ${val}${label && !isPlaceholder ? ': ' + label : ''}`}
+              <label
+                key={opt.text}
+                className={`option-label${isSelected ? ' selected' : ''}`}
               >
-                <span className="rating-number">{val}</span>
-                {label && !isPlaceholder && (
-                  <span className="rating-label">{label}</span>
-                )}
-              </button>
+                <input
+                  type="radio"
+                  name={`q-${question.id}`}
+                  value={label}
+                  checked={isSelected}
+                  onChange={() => handleSingle(label)}
+                  className="option-input"
+                />
+                <span className="option-indicator" />
+                <span className="option-text">{label}</span>
+              </label>
             )
           })}
         </div>
 
         {showError && !hasAnswer && (
-          <p className="field-error" role="alert">Please select a rating to continue.</p>
+          <p className="field-error" role="alert">Please select an answer to continue.</p>
         )}
       </div>
     )
